@@ -1,0 +1,14 @@
+<script>  
+
+function showform() 
+{  
+var data="Name:<input type='text' name='name'><br>Comment:<textarea rows='5' cols='80'></textarea><br><input type='submit' value='comment'>";  
+document.getElementById('demo').innerHTML=data;  
+ }  
+ </script>  
+
+<form name="myForm">  
+<input type="button" value="comment" 
+onclick="showform()">  
+<div id="demo"></div>  
+</form>
