@@ -1,0 +1,42 @@
+Java
+-------------------------
+1)Java is a object oriented programing language.
+2)Java is portable,secure and scalable language.
+3)Java is simpler than c and c++ as we don't have pointer concept,multiple inheritance and operator overloading.
+4)In java we have constructor but no destructor as there is automatic garbage clearance.
+5)In java we can develop web application,network application ,mobile application and standalone application.
+6)Java support multi-threading and exception handling .
+7)Java is case sensitive and platform independent.
+------------------------------------------------------
+Data type(primary)
+-------------------
+1)byte-1 byte
+2)short - 2bytes
+3)int - 4 bytes
+4)long - 8bytes
+5)float - 4 bytes
+6)double - 8 bytes
+7)char - 2 bytes
+8)boolean - 1 bit
+-------------------------------
+secondary datatype
+------------------------------
+1)String
+2)array
+3)class
+---------------------------------------
+operator
+--------------------
+1)unary operator :- i++,i--,++i,--i
+2)binary operator:-
+i)arithmatic:- +,-,*,/,%
+ii)bitwise:-<<,>>,nor,and,or
+iii)logical:-&&,||
+iv)relational:-<,>,<=,>=,!=,==
+v)assignment:-=
+3)ternary operator:-:,?
+----------------------------------------------
+
+
+
+
