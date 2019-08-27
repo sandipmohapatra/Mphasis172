@@ -164,8 +164,47 @@ void list()
 
 
 -------------------------------------------------------
+Interface
+----------------
+1)It contain only abstract methods.we donot use the keyword abstract.
+2)we have to implement it in the child class and override the abstract methods.
+3)we cannot instanciate a interface.
+4)the variables declared in the interface is final and static.
+5)the override methods should be public.
+6)we can extend a interface
+-------------------------------------------------------------------------------------------  
 
+package Mphasis;
+ interface a
+ {
+	 int a=10;//final and static
+	 void create();
+ }
+ interface b extends a
+ {
+	 void display();
+ }
+ interface c
+ {
+	 void list();
+ }
+  class Second implements b,c// multiple inheritance
+ {
+	public void create() {
+		System.out.println("create");	}
 
+	public void list() {
+	System.out.println("list");	}
+
+	public void display() {
+		System.out.println("display");	}
+	 public static void main(String[] args) {
+		Second ob=new Second();
+		ob.create();ob.display();ob.list();
+		System.out.println("the value of a is "+a);
+	}
+ }
+-------------------------------------------------------
 
 
 
