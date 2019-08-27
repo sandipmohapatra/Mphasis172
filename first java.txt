@@ -36,6 +36,78 @@ iv)relational:-<,>,<=,>=,!=,==
 v)assignment:-=
 3)ternary operator:-:,?
 ----------------------------------------------
+Class :- it is a blue print of an object.A class contain variable and methods.
+
+Object:- It is a reference pointer to a class.with an object we can access the variables and methods of a class.
+
+---------------------------
+Access specifier (to protect the data/secure the data)
+-------
+1)public :- if we declare variables and methods as public we can access it inside the class,out side the class and out side the package.
+
+2)private :- if we declare variables and methods as private we can access it inside the class only.
+
+3)protected :- if we declare variables and methods as protected we can access it inside the class,in the child class  and out side the package.
+
+4)default :- if we declare variables and methods as default we can access it inside the class,out side the class 
+-------------------------------------------------------
+constructor:-
+1)it is a method which has the same name as that of the class name.
+2)it is used to inistailize the variable.
+3)it does not return any value nor it have any return type.
+4)it executes automatically when an object is created for a class.
+5)we have 2 types of constructor 1)default 2)parameterized
+6)if we use more than one constructor in a prgram it is known as constructor overloading.
+------------------------------------------------------------------------------------
+example:-
+-----------------
+package Mphasis;
+import java.util.*;
+public class First 
+{	
+int empno;
+String name,address;
+float salary;
+	First(int empno,String name,String address,float salary)
+	{		
+this.empno=empno;		
+this.name=name;
+this.address=address;
+this.salary=salary;
+	}
+	void display()
+{
+System.out.println("empno :"+empno+"  "+"name :"+name+"   "+"address :"+address+"salary :"+salary);
+}
+	public static void main(String[] args) 
+	{	
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,address,salary of an employee");
+	int a=ob.nextInt();String b=ob.next();String c=ob.next();float d=ob.nextFloat();
+	First obj=new First(a,b,c,d);
+		obj.display();	
+}
+}
+-------------------------------------------------
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
