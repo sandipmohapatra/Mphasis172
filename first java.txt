@@ -139,9 +139,31 @@ class Student
 		}
 }
 -------------------------------------------------------------
+abstract class :-
+1)it is incomplete class.we use the keyword abstract.
+2)it contain concret methods as well as abstract method.
+3)we cannot instanciate an abstract class.
+4)we have to override the abstract methods in the child class and create object for the child class.
+5)it is used to define the objectives of the project.
+---------------------------------------------------------------------------------------------
+package Mphasis;
+ abstract class  Third
+{abstract void create();
+abstract void display();
+abstract void delete();
+void list()
+{	System.out.println("this will display list of employee");}}
+
+ public class Second extends Third
+ {	void create() {System.out.println("create");	}
+	void display() {System.out.println("display");	}
+	void delete() {System.out.println("delete");	}
+	 public static void main(String[] args) 
+	 {		Second obj=new Second();
+		obj.create();obj.display();obj.delete();obj.list();	} }
 
 
-
+-------------------------------------------------------
 
 
 
