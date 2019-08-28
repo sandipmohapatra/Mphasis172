@@ -205,7 +205,44 @@ package Mphasis;
 	}
  }
 -------------------------------------------------------
-
+package org.mphasis;
+public class inheritanceex 
+{
+int empno;
+String name,address;
+public inheritanceex(int empno, String name, String address)
+{
+	this.empno = empno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("empno :"+empno+" name :"+name+" address :"+address);
+}}
+---------------------------------------------------------------
+package org.mphasis;
+public class Childex extends inheritanceex 
+{
+	float salary;
+	String design;
+	public Childex(int empno, String name, String address,float salary,String design)
+	{
+		super(empno, name, address);//super class constructor will execute first
+		this.salary=salary;
+		this.design=design;
+			}
+	void display()
+	{
+		super.display();
+		System.out.println("salary :"+salary+" design :"+design);
+	}
+	public static void main(String[] args)
+	{
+	Childex obj=new Childex(101,"sandip","Pune",4500.53f,"Software eng");	
+	obj.display();
+	}}
+-------------------------------------------------------------
 
 
 
