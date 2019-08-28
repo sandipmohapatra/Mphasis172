@@ -243,6 +243,54 @@ public class Childex extends inheritanceex
 	obj.display();
 	}}
 -------------------------------------------------------------
+package Mphasis;
+public class Encapsulationex 
+{
+private int empno;
+private String name,address;
+private float salary;
+public int getEmpno() {
+	return empno;
+}
+public void setEmpno(int empno) {
+	this.empno = empno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAddress() {
+	return address;
+}
+public void setAddress(String address) {
+	this.address = address;
+}
+public float getSalary() {
+	return salary;
+}
+public void setSalary(float salary) {
+	this.salary = salary;
+}
+
+
+}
+---------------------------------
+package Mphasis;
+public class Test 
+{
+	public static void main(String[] args) 
+	{
+		Encapsulationex obj=new Encapsulationex ();
+		obj.setEmpno(101);
+		obj.setName("sandip");
+		obj.setAddress("Pune");
+		obj.setSalary(4500.50f);
+System.out.println("empno :"+obj.getEmpno()+" name :"+obj.getName()+" address :"+obj.getAddress());
+System.out.println("salary :"+obj.getSalary());	
+	}}
+---------------------------
 
 
 
