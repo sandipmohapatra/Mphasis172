@@ -291,6 +291,59 @@ System.out.println("empno :"+obj.getEmpno()+" name :"+obj.getName()+" address :"
 System.out.println("salary :"+obj.getSalary());	
 	}}
 ---------------------------
+has-a relationship
+---------------------------------------------------------------------------
+package org.mphasis;
+
+public class Address 
+{
+private int buildno,roadno;
+private String sname,city;
+public Address(int buildno, int roadno, String sname, String city) 
+{
+	this.buildno = buildno;
+	this.roadno = roadno;
+	this.sname = sname;
+	this.city = city;
+}
+public String toString() //convert object to String 
+{
+	return "buildno=" + buildno + ", roadno=" + roadno + ", sname="
+			+ sname + ", city=" + city ;
+}}
+-----------------------------------------------------------------------------------
+package org.mphasis;
+public class Employee 
+{
+private int empno;
+private String name,design;
+private Address add;
+public Employee(int empno, String name, String design, Address add)
+{
+	this.empno = empno;
+	this.name = name;
+	this.design = design;
+	this.add = add;
+}
+
+void display()
+{
+	System.out.println("empno:"+empno+" name :"+name+" designation :"+design+"Address :"+add);
+	}}
+------------------------------------------------------------------
+package org.mphasis;
+
+public class Testemp 
+{
+public static void main(String[] args) 
+{
+Address ob=new Address(101,20,"kharadi","pune");
+Employee emp=new Employee(1001,"sandip","Trainer",ob);
+emp.display();
+}}
+-----------------------------------------------------------------------------
+
+
 
 
 
