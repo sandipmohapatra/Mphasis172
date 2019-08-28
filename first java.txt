@@ -342,6 +342,68 @@ Employee emp=new Employee(1001,"sandip","Trainer",ob);
 emp.display();
 }}
 -----------------------------------------------------------------------------
+final is a keyword .we can define a class as final ,variable as final and method as final.
+
+if we declare a class as final we cannot inherite it.
+if we declare a variable as final we cannot change it and we have to assign it.
+if we declare a method as final we cannot override it.
+it is used to create immutable class.(it cannot be changed example String class)
+------------------------------------------------------------------------------------------------------------------
+package Mphasis;
+public final class Finalex //cannot be inherited 
+{
+final int a=10;
+final void display()//cannot override
+{
+	System.out.println("the value of a is "+a);
+	System.out.println("this is final method");
+}
+public static void main(String[] args) {
+	Finalex ob=new Finalex();
+	ob.display();
+}
+}
+-----------------------------------------------------------------------
+static :-The static keyword in Java is used for memory management mainly.
+We can apply java static keyword with variables, methods, blocks 
+and nested class.
+It makes your program memory efficient (it saves memory).
+The static variable gets memory only once in 
+the class area at the time of class loading.
+static block execute before the main method.
+we access the static variables and methods without an object or by a class.
+we cannot access a non static variable inside a static method.
+----------------------------------------------------------------------------------------
+package Mphasis;
+public class Staticex 
+{
+static int a=10;
+static void display()
+{
+	System.out.println("this is a static method");
+}
+static 
+{
+	System.out.println("this is a static block");
+}
+public static void main(String[] args) 
+{
+display();
+System.out.println(a);}}
+----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
