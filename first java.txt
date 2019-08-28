@@ -391,6 +391,26 @@ public static void main(String[] args)
 display();
 System.out.println(a);}}
 ----------------------------------------------------
+inner class
+--------------------
+package Mphasis;
+class TestMemberOuter1
+{  
+ private static int data=30;  
+static class Inner
+ {  
+  void msg()
+  {
+	  System.out.println("data is "+data);
+  }   }  
+ public static void main(String args[])
+ {  
+  TestMemberOuter1 obj=new TestMemberOuter1();  
+  //TestMemberOuter1.Inner in=obj.new Inner(); 
+ Inner in=new Inner(); 
+  in.msg();  
+ }  }  
+-----------------------------------------------------
 
 
 
