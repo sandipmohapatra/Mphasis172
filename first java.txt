@@ -678,7 +678,21 @@ fr.close();br.close();
 System.out.println("file reading.....");
 }}
 -----------------------------------------------------------------------------
+import java.io.*;
+public class FileAppendDemo
+{
+    public static void main(String args[]) throws IOException 
+    {
+    	    	    String textToAppend = "We are appending a Text";
+    	    	  //Set true for append mode
+ BufferedWriter writer = new BufferedWriter(new FileWriter("second.txt", true)); 
+    	    writer.newLine();   //Add new line
+    	    writer.write(textToAppend);
+    	    writer.close();
+    	}
+    }
 
+----------------------------------------
 
 
 
