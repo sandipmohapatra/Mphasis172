@@ -19,6 +19,10 @@ JdbcApp()
 	b2=new Button("UPDATE");
 	b3=new Button("DELETE");
 	b4=new Button("SELECT");
+	b1.addActionListener(this);
+	b2.addActionListener(this);
+	b3.addActionListener(this);
+	b4.addActionListener(this);
 	setLayout(new FlowLayout());
 	add(l1);add(t1);
 	add(l2);add(t2);
@@ -54,10 +58,10 @@ public void actionPerformed(ActionEvent ae)
 	     String x=t1.getText();
 	     String y=t2.getText();
 	     String z=t3.getText();
-	     int p=Integer.parseInt(z);
-	     st.setString(1,x);
+	     int p=Integer.parseInt(x);
+	     st.setInt(1,p);
 	     st.setString(2,y);
-	     st.setInt(3,p);
+	     st.setString(3,z);
 	     st.execute();
 	     System.out.println("one row inserted");
 	   }
