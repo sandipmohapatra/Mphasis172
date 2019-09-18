@@ -1,0 +1,190 @@
+1)smallest unit of storage in oracle.
+ans:-Data block
+
+2)method for executing DDL
+ans:-executeupdate(),execute()
+
+3)ACID (true)
+atomicity,consistency,isolation,durability
+
+4)component of sql server
+ans:-all the above
+
+5)where BCNF applied
+and:-
+
+6)difference between where and having?
+
+7)groupby, having ,order by
+
+8)what type of data can be stored in data base
+ans :-
+
+9)in which data base many-to-many relation is not support
+ans:- networking
+
+10)types of entities
+ans:-subtype,supertype,dependent, independent
+
+11)Method to get ResultSetMetaData
+ans:- getMetaData()
+
+12)command use to open cursor for loop
+ans:-none
+
+13)cursor control key :-implicitly open
+
+14)which two aggregate function are valid on start_date column 
+ans:-min,count
+
+15)relation is also called as table.
+
+16)rows are also called Tuple
+
+17)what is dual table ?(dummy table having one row and one column)
+
+18)write a query to get dept name, manager,salary of the manager for all manager whose exp is more than 5 years?
+
+ans:- select deptname,name,salary from dept d join emp e on (d.mang_id=e.mang_id) where (sysdate()-hire_date)/365  >5;
+
+19)NVL  and NVL2  in sql?
+
+20)Callable statement returns ?
+ans:- 
+
+21)update multiple rows in sql?
+ans:- update emp set salary=15000 where empno in(102,102);
+
+
+22)which DR model doesnot support many to many?
+ans:-network
+
+23)interface provide methods for batch processing ?
+Ans:-statement
+24)a view can be  read_only?
+
+25)frequently executed statement ?
+ans:- PreparedStatement
+
+26)User defined exception using RAISED APPLICATION_ERROR
+
+27)Relations of RDBMS?
+
+28)what is redundancy?
+
+29)what is normalization?
+
+30)usage of %datatype?
+
+31)what is class/interface that is used to connect URL string connection?
+
+32)Default concurrency of resultset?
+
+33)Full outer join is used for ?
+ans:-to display all values
+
+34)new features added in JDBC 2.0?
+ans:-scollable resultset,batch update,
+
+35)Date format of monday 01 june 1990?
+
+ans :- select TO_CHAR(SYSDATE,'FMDay',DD Month,YYYY)from dual;
+
+36)select multiple rows of data from database and then process row individually ?
+ans:- cursor
+
+37)Do jdbc uses persistance storage to get and set object?
+ans:-True
+ 
+38)how many resultset are there in JDBC 2.0
+ans:- 3 
+
+39)the wild card in where clause is useful when 
+ans:- when exact match is not posible in a select statement.
+
+40)combination of 2 or more columns used to identify perticular rows in a relation is
+ans:- composite key
+
+41)which of the following work on group of values except one
+ans) abs
+42)Return value of getUpdateCount
+ans)-1
+43)valid type of object to store date and time
+ans)java.util.datetime
+44)Relational data base consists of 
+ans)tables
+
+
+45)An attribute in a relation is a foreign key if the ___ key from one relation is used as attribute in that relation?
+ans:-primary
+
+46)SQL WHERE clause___?
+ans:- Limits the row data
+
+47)isSearchable(int column) returns?
+ans:-
+
+48)which interface provides methods  for processing in jdbc
+ans:-java.sql.statement, java.sql.Preparedstatement
+
+49)which method drops all changes made since the previous commit/rollback?
+A)public void rollback
+50)WHERE lower(country_address)='france'
+ans)
+
+51)what the valid way to pass values while inserting the row using ResultSet?
+ans):
+
+52)what happens when data type of actual parameter is not same as the data type of formal parameter?
+ans):
+
+52)ResultSet.next() gives next row value. Is it true or false?
+ans):True
+
+53)Course(corse_id,sec_id,semister)
+here the course_id,sec_id ans semester are_____and course is a_______
+ans):attributes,relation
+
+54)which variables are created when an object is created with the use of the keyword 'new' and destroy when the object is destroyed?
+ans):Insance variables
+
+55)which is the aggregate function which can not be used only with single row?
+ans:max
+
+56)you are granted the Create view privilege.What dose this allow you to do?
+ans:create a view in your schema
+
+57)which is the aggregate function which can be used only with single row?
+ans:ceil,round, floor
+
+58)one que on for loop for incrementin from 10-19 whose ans is 
+b):printing 10 to 19 values except 15
+
+59)Price of the book should be lesser than 500 or grreater than 900. Also sort the purchase date according to the lastest purchase.
+Ans: Price < 500 OR >900, SORT BY DESC
+
+60)The JDBC API has always supported presistent storage of object defined in the java programming language through the method getObject and setObject
+ans:True
+
+61)total number of customer is 7
+
+62)which of the following queries can used to search for employees with the pattren a_b in their names
+ans:option d)select last_name from employees where last_name like'%a\_b%' escape'\';
+
+63)
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
