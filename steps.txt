@@ -1,0 +1,63 @@
+project Step by Step
+-------------------------------------
+steps 1: download nodejs and install.
+
+step 2:- https://github.com/angular/quickstart  
+
+step 3:- npm install
+
+step 4:-npm start
+
+
+
+automatically the browser opens :- http://localhost:3000
+
+to change port :-ng server --port 5000
+---------------------------------------------------------------------------------------------
+app.component.ts
+---------------------------------------
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {
+}
+-----------------------------------------------------
+app.component.html
+---------------------------------------
+<div class="wrapper">
+    <!-- Menubar -->
+    <header>
+         
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Sandip Workout Tracker</a>
+                </div>
+                      <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" [routerLink]="['/view']">View All</a></li>
+                        <li><a href="#" [routerLink]="['/create-workout']">Create</a></li>
+                        <li><a href="#" [routerLink]="['/create-category']">Category</a></li>
+                        <li><a href="#" [routerLink]="['/track']">Track</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       </header>
+        <!-- Content -->
+    <div class="container content">
+		<router-outlet></router-outlet>
+    </div>
+    <alert></alert>
+</div>	
+***for reference use :- https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+----------------------------------------------------------------
+

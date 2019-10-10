@@ -1,0 +1,177 @@
+Angular  has pipes that can be used to transform data.
+---------------------------------------------------------------------------------------------
+Syntax is :-
+Propertyvalue | lowercase 
+
+----------------------------------------------------------
+example :1
+----------------------
+app.component.ts file.
+-------------------------------------------
+import {    Component } from '@angular/core';
+@Component ({ 
+   selector: 'my-app', 
+   templateUrl: 'app/app.component.html' 
+}) 
+export class AppComponent { 
+   TutorialName: string = 'Angular JS'; 
+   appList: string[] = ["Binding", "Display", "Services"]; 
+} 
+-----------------------------------------------------------------------
+app.component.html file.
+-------------------------------------------------------------------------
+<div> 
+   The name of this Tutorial is {{TutorialName}}<br>  
+   The first Topic is {{appList[0] | uppercase }}<br> 
+   The second Topic is {{appList[1] | uppercase }}<br> 
+   The third Topic is {{appList[2]| uppercase }}<br> 
+</div>
+
+----------------------------------------------------------------------------------------
+
+example :2
+-------------------
+import {    Component } from '@angular/core'; 
+
+@Component ({ 
+   selector: 'my-app', 
+   templateUrl: 'app/app.component.html' 
+}) 
+
+export class AppComponent { 
+   TutorialName: string = 'Angular JS'; 
+   appList: string[] = ["Binding", "Display", "Services"]; 
+}
+Next, ensure the following code is present in the app/app.component.html file.
+
+<div> 
+   The name of this Tutorial is {{TutorialName}}<br>  
+   The first Topic is {{appList[0] | lowercase}}<br> 
+   The second Topic is {{appList[1] | lowercase}}<br> 
+   The third Topic is {{appList[2]| lowercase}}<br> 
+</div> 
+
+--------------------------------------------------------
+example 3:
+--------------------
+import {   Component} from '@angular/core';
+@Component ({
+   selector: 'my-app',
+   templateUrl: 'app/app.component.html'
+})
+export class AppComponent {
+   TutorialName: string = 'Angular JS';
+   appList: string[] = ["Binding", "Display", "Services"];
+}
+------------------------------------------------------------------
+app.component.html file.
+----------------------------------------
+<div> 
+   The name of this Tutorial is {{TutorialName}}<br>  
+   The first Topic is {{appList[0] | slice:1:2}}<br> 
+   The second Topic is {{appList[1] | slice:1:3}}<br> 
+   The third Topic is {{appList[2]| slice:2:3}}<br> 
+</div> 
+-------------------------------------------------------------------
+example 4:
+import {    Component } from '@angular/core';  
+@Component ({ 
+   selector: 'my-app', 
+   templateUrl: 'app/app.component.html' 
+}) 
+export class AppComponent { 
+   newdate = new Date(2016, 3, 15); 
+}
+-------------------
+app.component.html 
+<div> 
+   The date of this Tutorial is {{newdate | date:"MM/dd/yy"}}<br>  
+</div>
+-------------------------------------------------------------------------
+example 5:
+import {    Component } from '@angular/core';  
+
+@Component ({ 
+   selector: 'my-app', 
+   templateUrl: 'app/app.component.html' 
+}) 
+
+export class AppComponent { 
+   newValue: number = 123; 
+} 
+----------------------------------------
+app.component.html file.
+
+<div> 
+   The currency of this Tutorial is {{newValue | currency}}<br>      
+</div>
+
+---------------------------------------------------------------------
+Angular  also has the facility to create custom pipes. The general way to define a custom pipe is as follows.
+
+import { Pipe, PipeTransform } from '@angular/core';  
+@Pipe({name: 'Pipename'}) 
+
+export class Pipeclass implements PipeTransform { 
+   transform(parameters): returntype { } 
+} 
+Where,
+
+'Pipename' - This is the name of the pipe.
+
+Pipeclass - This is name of the class assigned to the custom pipe.
+
+Transform - This is the function to work with the pipe.
+
+Parameters - This are the parameters which are passed to the pipe.
+
+Returntype - This is the return type of the pipe.
+----------------------------------------------------------------------------------
+multiplier.pipe.ts
+------------------------------------
+import {Pipe,PipeTransform} from '@angular/core';
+
+@Pipe({name: 'Multiplier'})
+
+export class Multiplierpipe implements PipeTransform
+{
+    transform(value:number, multiply: number):number
+    {
+        return multiply * value
+    }
+}
+
+-----------------------------
+app.component.ts
+--------------------------------
+import {Component} from '@angular/core';
+@Component ({
+  selector: 'my-app',
+  template:`
+  <p>Multiplier {{5 | Multiplier: 20}}</p> <br />
+  
+  <p>Multiplier {{2 | Multiplier: 20}}</p> <br />
+  
+  <p>Multiplier {{4 | Multiplier: 20}}</p> <br />
+   `
+})
+export class AppComponent
+{}
+--------------------------------
+app.module.ts
+----------------------
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent }  from './app.component';
+import {FormsModule} from  '@angular/forms';
+import { Multiplierpipe } from './multiplier.pipe';
+
+@NgModule({
+  imports:      [ BrowserModule],
+  declarations: [ AppComponent ,Multiplierpipe],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+
+-------------------------------
